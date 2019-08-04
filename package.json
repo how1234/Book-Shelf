@@ -1,0 +1,35 @@
+{
+  "name": "book-shelf",
+  "version": "1.0.0",
+  "description": "Its a web application by using React, NodeJS, Redux and MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js"
+     
+  },
+  "engines": {
+    "node":"11.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/how1234/Book-Shelf.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/how1234/Book-Shelf/issues"
+  },
+  "homepage": "https://github.com/how1234/Book-Shelf#readme",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment-js": "^1.1.15",
+    "mongoose": "^5.6.7"
+  }
+}
