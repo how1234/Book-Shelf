@@ -143,7 +143,6 @@ export function getUsers(){
 }
 
 export function registerUser(newuser,userList){
-    console.log(newuser)
     const request = axios.post(`/api/register`,newuser)
 
     return (dispatch) => {
