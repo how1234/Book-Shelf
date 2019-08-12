@@ -64,7 +64,6 @@ export function clearBookWithReviewer(){
 export function addBook(book) {
     
     const request = axios.post('/api/book',book).then(response => response.data)
-    console.log(book)
     return {
         type:"ADD_BOOK",
         payload:request
@@ -109,7 +108,6 @@ export function clearBook(){
 //User
 export function loginUser({email,password}){
     const request = axios.post('/api/login',{email,password}).then(response => response.data)
-    console.log(request)
     return {
         type:'USER_LOGIN',
         payload:request

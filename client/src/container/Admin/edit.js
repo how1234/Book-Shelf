@@ -46,7 +46,7 @@ class editBook extends PureComponent {
 
     }
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps)
+
         let book = nextProps.books.BookNow;
         
         this.setState({
