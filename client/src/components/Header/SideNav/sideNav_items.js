@@ -31,7 +31,8 @@ const SideNaviItems = ({user}) => {
             icon:'file-text-o',
             text:'Add Admins',
             link:'/user/register',
-            restricted:true
+            // restricted:true
+            restricted:false
         },
         {
             type:'navItem',
