@@ -123,7 +123,7 @@ app.post('/api/login',(req,res) => {
                 if (err) return res.status(400).send(err);
                 res.cookie('auth',user.token).send({
                     isAuth:true,
-                    id:user._id,
+                    id:user._id.$oid,
                     email:user.email
                 })
                 
