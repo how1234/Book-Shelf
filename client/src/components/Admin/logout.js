@@ -2,7 +2,7 @@ import React from 'react'
 import axios from 'axios';
 
 const logout = (props) => {
-    let request = axios.get(`/api/logout`)
+    axios.get(`/api/logout`)
                 .then(request =>{
                     setTimeout(()=>{
                         props.history.push('/')

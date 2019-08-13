@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect} from 'react-redux';
 import { Link } from 'react-router-dom'
 import { addBook,clearNewBook } from '../../actions'
-class AddBook extends Component {
+class AddReview extends Component {
     state = {
         formdata:{
             name:'',
@@ -53,7 +53,7 @@ class AddBook extends Component {
         return (
             <div className="rl_container article">
                 <form onSubmit={this.submitForm}>
-                    <h2> Add a review </h2> 
+                    <h2> Add a Book</h2> 
 
                     <div className="form_element">
                         <input 
@@ -114,7 +114,7 @@ class AddBook extends Component {
                     <button
                     className="button" 
                     type="submit"
-                    onSubmit={this.submitForm}> Add review </button>
+                    onSubmit={this.submitForm}> Add Book </button>
                     {
                         this.props.books.newbook ? this.showNewBook(this.props.books.newbook) : null
                     }
@@ -131,4 +131,4 @@ const mapStateToProps = (state) => {
         books:state.books
     }
 }
-export default connect(mapStateToProps)(AddBook)
+export default connect(mapStateToProps)(AddReview)

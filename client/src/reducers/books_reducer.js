@@ -18,7 +18,7 @@ export default function(state={},action){
                 reviewer:action.payload.reviewer
             }
 
-        case 'ADD_BOOK':
+        case 'ADD_REVIEW':
             return {...state,newbook:action.payload}
         case 'CLEAR_NEWBOOK':
              return {...state,newbook:action.payload}

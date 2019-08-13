@@ -22,14 +22,14 @@ const SideNaviItems = ({user}) => {
         {
             type:'navItem',
             icon:'file-text-o',
-            text:'My review',
-            link:'/user-reviews',
+            text:'My Review',
+            link:'/user-books',
             restricted:true
         },
         {
             type:'navItem',
             icon:'file-text-o',
-            text:'Add Admins',
+            text:'Register',
             link:'/register',
             restricted:true
         },
@@ -44,7 +44,7 @@ const SideNaviItems = ({user}) => {
         {
             type:'navItem',
             icon:'file-text-o',
-            text:'Add reviews',
+            text:'Add Reviews',
             link:'/user/add',
             restricted:true
         },

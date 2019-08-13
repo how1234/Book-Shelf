@@ -25,13 +25,16 @@ class BookView extends Component {
                 </div>
                 <div className="br_box">
                     <div className="left">
-                        <span>Pages:</span> {books.book.pages}
+                        <div>
+                            <span>Pages:</span> {books.book.pages}
+                        </div>
                         <div>
                             <span>Price: </span> {books.book.price}
                         </div>
                     </div>
                     
                     <div className="right">
+                        
                         <span>Rating</span>
                         <div>{books.book.rating}/5</div>
                     </div>
@@ -43,7 +46,6 @@ class BookView extends Component {
     render() {
         let books = this.props.books;
 
-        console.log(this.props)
         return(
             <div>
                 {this.renderBook(books)}

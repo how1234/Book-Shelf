@@ -33,8 +33,8 @@ export function getBookWithReviewer(id){
         request.then( ({data}) => {
             let book = data;
             
-            axios.get(`/api/getReviewer?id=${book.ownerId}`).
-            then( ({data})=> {
+            axios.get(`/api/getReviewer?id=${book.ownerId}`)
+            .then( ({data})=> {
                 
                 let response = {
                     book,
@@ -141,7 +141,7 @@ export function getUsers(){
 }
 
 export function registerUser(newuser,userList){
-    console.log(newuser)
+    
     const request = axios.post(`/api/register`,newuser)
 
     return (dispatch) => {
