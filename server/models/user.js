@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const config = require('./../config/config').get(process.env.NODE_ENV);
 const SALT_I = 10
+const SECERET = "PASSWORD123456"
 
 const userSchema = mongoose.Schema({
     email:{
@@ -59,7 +60,7 @@ userSchema.methods.comparePassword = function(candidatePassword,cb){
 
 userSchema.methods.generateToken = function(cb) {
     var user = this;
-    var token = jwt.sign(user._id.toHexString(),"PASSWORD123456");
+    var token = jwt.sign(user._id.toHexString(),SECERET);
     
     user.token = token;
     user.save(function(err,user){
@@ -71,7 +72,7 @@ userSchema.methods.generateToken = function(cb) {
 userSchema.statics.findByToken = function(token,cb) {
     var user = this;
     console.log(config.SECRET);
-    jwt.verify(token,config.SECRET,function(err,decode){
+    jwt.verify(token,SECERET,function(err,decode){
         user.findOne({"_id":decode,"token":token},function(err,user){
             if (err) return cb(err);
             cb(null,user)
