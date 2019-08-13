@@ -61,11 +61,11 @@ export function clearBookWithReviewer(){
         }
     }
 }
-export function addBook(book) {
+export function addReview(review) {
     
-    const request = axios.post('/api/book',book).then(response => response.data)
+    const request = axios.post('/api/book',review).then(response => response.data)
     return {
-        type:"ADD_BOOK",
+        type:"ADD_REVIEW",
         payload:request
     }
 }

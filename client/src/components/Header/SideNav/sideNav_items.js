@@ -29,8 +29,8 @@ const SideNaviItems = ({user}) => {
         {
             type:'navItem',
             icon:'file-text-o',
-            text:'Register',
-            link:'/register',
+            text:'Register a new user',
+            link:'/user/register',
             restricted:true
         },
         {

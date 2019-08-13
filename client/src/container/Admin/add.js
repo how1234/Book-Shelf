@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect} from 'react-redux';
 import { Link } from 'react-router-dom'
-import { addBook,clearNewBook } from '../../actions'
+import { addReview,clearNewBook } from '../../actions'
 class AddReview extends Component {
     state = {
         formdata:{
@@ -25,7 +25,7 @@ class AddReview extends Component {
     }
     submitForm = (event) => {
         event.preventDefault();
-        this.props.dispatch(addBook({
+        this.props.dispatch(addReview({
             ...this.state.formdata,
             ownerId:this.props.user.login.id
         }))
@@ -53,7 +53,7 @@ class AddReview extends Component {
         return (
             <div className="rl_container article">
                 <form onSubmit={this.submitForm}>
-                    <h2> Add a Book</h2> 
+                    <h2> Add a Review</h2> 
 
                     <div className="form_element">
                         <input 
@@ -114,7 +114,7 @@ class AddReview extends Component {
                     <button
                     className="button" 
                     type="submit"
-                    onSubmit={this.submitForm}> Add Book </button>
+                    onSubmit={this.submitForm}> Add Review </button>
                     {
                         this.props.books.newbook ? this.showNewBook(this.props.books.newbook) : null
                     }
