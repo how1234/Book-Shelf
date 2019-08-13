@@ -26,12 +26,12 @@ class login extends Component {
     componentWillReceiveProps(nextProps) {
        
         if (nextProps.user.login.isAuth) {
-            console.log("yeah")
+            
             this.props.history.push("/user")
         }
     }
     render() {
-        console.log(this.props)
+      
         let user = this.props.user;
         return (
             
