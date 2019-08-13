@@ -121,11 +121,13 @@ app.post('/api/login',(req,res) => {
 
             user.generateToken((err,user) => {
                 if (err) return res.status(400).send(err);
-                res.cookie('auth',user.token).send({
+                userdata = {
                     isAuth:true,
                     id:user._id,
                     email:user.email
-                })
+                }
+                console.log(userdata)
+                res.cookie('auth',user.token).send(userdata)
                 
             })
         })
