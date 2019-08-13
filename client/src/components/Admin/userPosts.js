@@ -23,6 +23,7 @@ class userPosts extends Component {
         :null
     )
     render() {
+        console.log(this.props)
         let user = this.props.user;
 
         return (
